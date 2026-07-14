@@ -1,147 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Umami Studio</title>
-    <meta name="description" content="The Umami Studio - Privacy-first, minimalist utility applications.">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/images/audio-rescue-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Umami Studio — Privacy-first utility apps</title>
+  <meta name="description" content="The Umami Studio builds privacy-first, minimalist utility applications for iOS and Android.">
+  <meta property="og:title" content="The Umami Studio">
+  <meta property="og:description" content="Privacy-first, meticulously designed utility apps.">
+  <meta property="og:image" content="https://theumamistudio.github.io/assets/images/audio-rescue-icon.png">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" type="image/png" href="assets/images/audio-rescue-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <header>
-        <h1 class="hero-title animate-up">The Umami Studio</h1>
-        <p class="hero-subtitle animate-up delay-1">We build privacy-first, meticulously designed utility apps that solve real problems elegantly.</p>
-    </header>
+  <!-- ─── NAV ─────────────────────────────────────── -->
+  <nav>
+    <span class="nav-logo">Umami Studio</span>
+    <ul class="nav-links">
+      <li><a href="#values">Philosophy</a></li>
+      <li><a href="#apps">Apps</a></li>
+      <li><a href="/audiorescue/privacy">Privacy</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <h2 class="section-title animate-up delay-1">Core Philosophy</h2>
-        
-        <section class="philosophy-grid animate-up delay-2">
-            <div class="philosophy-card">
-                <h3>Privacy First</h3>
-                <p>Your data stays on your device. We don't track you, profile you, or sell your information. Period.</p>
-            </div>
-            <div class="philosophy-card">
-                <h3>Minimalist Design</h3>
-                <p>We strip away the noise. Our interfaces are designed to be intuitive, clean, and out of your way.</p>
-            </div>
-            <div class="philosophy-card">
-                <h3>Premium Utility</h3>
-                <p>We build tools that work flawlessly when you need them most, engineered with care and precision.</p>
-            </div>
-        </section>
+  <!-- ─── HERO ─────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow">
+      <span>✦</span> Crafting with intent
+    </div>
+    <h1 class="hero-title">Tools that&nbsp;just&nbsp;work.</h1>
+    <p class="hero-subtitle">
+      We build privacy-first utility applications for iOS and Android — engineered with precision, designed for clarity.
+    </p>
+    <div class="hero-cta">
+      <a href="#apps" class="btn btn-ghost">Explore our apps →</a>
+    </div>
 
-        <h2 class="section-title animate-up delay-2" style="margin-top: 80px;">Flagship App</h2>
-        
-        <article class="app-showcase animate-up delay-3">
-            <div class="app-hero">
-                <img src="assets/images/audio-rescue-icon.png" alt="Audio Rescue App Icon" class="app-icon">
-                <div class="app-info">
-                    <h3>Audio Rescue</h3>
-                    <p>Accidentally got water in your phone's speakers? Audio Rescue uses carefully tuned sound frequencies to help push trapped moisture out and restore speaker clarity.</p>
-                    
-                    <div class="demo-controls">
-                        <!-- Interactive Web Audio Button -->
-                        <button id="demoPlayBtn" class="btn btn-outline">
-                            <span class="btn-icon">🌊</span>
-                            <span id="demoBtnText">Test 165Hz Frequency</span>
-                        </button>
-                        <a href="#" class="btn btn-primary" aria-label="Get on Google Play">Available Soon</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="app-features">
-                <div class="feature">
-                    <h4>Smart Cleaning Modes</h4>
-                    <p>Quick, Deep, and Turbo modes specifically calibrated for different hardware environments.</p>
-                </div>
-                <div class="feature">
-                    <h4>Precision Control</h4>
-                    <p>Manually adjust the output frequency from 150Hz to 450Hz for targeted clearing.</p>
-                </div>
-            </div>
-        </article>
+    <div class="scroll-hint">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
 
-    </main>
+  <!-- ─── VALUES ───────────────────────────────────── -->
+  <section class="section" id="values">
+    <p class="section-label reveal">Philosophy</p>
 
-    <footer>
-        <div class="footer-content">
-            <nav class="footer-nav">
-                <a href="/audiorescue/privacy">Audio Rescue Privacy Policy</a>
-                <a href="/audiorescue/terms">Audio Rescue Terms of Use</a>
-                <a href="mailto:hello@theumamistudio.com">Contact Us</a>
-            </nav>
-            <p class="copyright">&copy; 2026 The Umami Studio. All rights reserved.</p>
+    <div class="values-grid">
+      <div class="value-item reveal reveal-delay-1">
+        <div class="value-num">01</div>
+        <h3 class="value-title">Privacy First</h3>
+        <p class="value-desc">Your data stays on your device. We don't track you, profile you, or monetise your behaviour. Full stop.</p>
+      </div>
+      <div class="value-item reveal reveal-delay-2">
+        <div class="value-num">02</div>
+        <h3 class="value-title">Radical Clarity</h3>
+        <p class="value-desc">Every screen, every tap, every word is deliberate. We remove anything that doesn't serve a purpose.</p>
+      </div>
+      <div class="value-item reveal reveal-delay-3">
+        <div class="value-num">03</div>
+        <h3 class="value-title">Built to Last</h3>
+        <p class="value-desc">We obsess over correctness, performance, and longevity — so our apps stay reliable long after launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ─── APPS ──────────────────────────────────────── -->
+  <section class="apps-section" id="apps">
+    <p class="section-label reveal" style="padding-top: 80px;">Apps</p>
+
+    <div class="app-card reveal">
+      <div class="app-card-header">
+        <div>
+          <div class="app-meta">
+            <img src="assets/images/audio-rescue-icon.png" alt="Audio Rescue icon" class="app-icon">
+            <span class="app-badge">&#9733; New</span>
+          </div>
+          <h2 class="app-name">Audio Rescue</h2>
+          <p class="app-tagline">
+            Accidentally got water in your phone's speakers? Audio Rescue uses carefully tuned sound frequencies to help push trapped moisture out and restore speaker clarity — no shaking required.
+          </p>
         </div>
-    </footer>
+        <div class="app-availability">
+          <span class="platform-tag">iOS</span>
+          <span class="platform-tag">Android</span>
+        </div>
+      </div>
 
-    <!-- Interactive Web Audio Script -->
-    <script>
-        const playBtn = document.getElementById('demoPlayBtn');
-        const btnText = document.getElementById('demoBtnText');
-        
-        let audioCtx = null;
-        let oscillator = null;
-        let gainNode = null;
-        let isPlaying = false;
+      <div class="app-features-row">
+        <div class="feat-cell">
+          <span class="feat-icon">💧</span>
+          <h4 class="feat-title">Quick Clean</h4>
+          <p class="feat-desc">Fast 15–60 second sessions at 165Hz optimised for everyday splashes.</p>
+        </div>
+        <div class="feat-cell">
+          <span class="feat-icon">🔊</span>
+          <h4 class="feat-title">Deep Sweep</h4>
+          <p class="feat-desc">30-second sweep from 165Hz to 300Hz for deeper moisture clearing.</p>
+        </div>
+        <div class="feat-cell">
+          <span class="feat-icon">⚡</span>
+          <h4 class="feat-title">Turbo Mode</h4>
+          <p class="feat-desc">High-intensity 400Hz bursts for stubborn water after full submersion.</p>
+        </div>
+        <div class="feat-cell">
+          <span class="feat-icon">🎛️</span>
+          <h4 class="feat-title">Custom Frequency</h4>
+          <p class="feat-desc">Manual control from 150Hz to 450Hz for precise, targeted results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        playBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                stopTone();
-            } else {
-                playTone();
-            }
-        });
+  <div class="section-divider"></div>
 
-        function playTone() {
-            // Initialize AudioContext on first user gesture
-            if (!audioCtx) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            }
-            
-            // Create Oscillator (Sine wave at 165Hz - standard water eject frequency)
-            oscillator = audioCtx.createOscillator();
-            oscillator.type = 'sine';
-            oscillator.frequency.setValueAtTime(165, audioCtx.currentTime);
-            
-            // Create Gain node for smooth fade in/out (prevents clicking)
-            gainNode = audioCtx.createGain();
-            gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-            gainNode.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 0.1); // Fade in
-            
-            // Connect and play
-            oscillator.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-            oscillator.start();
-            
-            isPlaying = true;
-            playBtn.classList.add('btn-playing');
-            playBtn.classList.remove('btn-outline');
-            btnText.innerText = 'Stop Frequency';
+  <!-- ─── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <span class="footer-brand">The Umami Studio</span>
+    <ul class="footer-links">
+      <li><a href="/audiorescue/privacy">Privacy Policy</a></li>
+      <li><a href="/audiorescue/terms">Terms of Use</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 The Umami Studio. All rights reserved.</p>
+  </footer>
+
+  <!-- ─── SCROLL REVEAL SCRIPT ──────────────────────── -->
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
+      }),
+      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+    );
 
-        function stopTone() {
-            if (oscillator && gainNode) {
-                // Smooth fade out
-                gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.1);
-                oscillator.stop(audioCtx.currentTime + 0.1);
-                
-                setTimeout(() => {
-                    oscillator.disconnect();
-                    gainNode.disconnect();
-                    oscillator = null;
-                    gainNode = null;
-                }, 100);
-            }
-            
-            isPlaying = false;
-            playBtn.classList.remove('btn-playing');
-            playBtn.classList.add('btn-outline');
-            btnText.innerText = 'Test 165Hz Frequency';
-        }
-    </script>
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
