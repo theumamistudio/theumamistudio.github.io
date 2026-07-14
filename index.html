@@ -1,144 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Umami Studio — Privacy-first utility apps</title>
   <meta name="description" content="The Umami Studio builds privacy-first, minimalist utility applications for iOS and Android.">
-  <meta property="og:title" content="The Umami Studio">
-  <meta property="og:description" content="Privacy-first, meticulously designed utility apps.">
-  <meta property="og:image" content="https://theumamistudio.github.io/assets/images/audio-rescue-icon.png">
-  <meta name="theme-color" content="#0a0a0b">
+  <meta name="theme-color" content="#ffffff" id="themeColorMeta">
   <link rel="icon" type="image/png" href="assets/images/audio-rescue-icon.png">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/studio.css">
+  <!-- Inline theme script runs before paint to avoid flash -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('ums-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
 </head>
 <body>
 
-  <!-- ─── NAV ─────────────────────────────────────── -->
-  <nav>
+  <!-- ── NAV ───────────────────────────────────── -->
+  <nav class="nav">
     <span class="nav-logo">Umami Studio</span>
-    <ul class="nav-links">
-      <li><a href="#values">Philosophy</a></li>
-      <li><a href="#apps">Apps</a></li>
-      <li><a href="/audiorescue/privacy">Privacy</a></li>
-    </ul>
+    <div class="nav-right">
+      <a href="#apps" class="nav-link">Apps</a>
+      <a href="mailto:theumamistudio@gmail.com" class="nav-link">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
   </nav>
 
-  <!-- ─── HERO ─────────────────────────────────────── -->
-  <section class="hero" id="hero">
-    <div class="hero-eyebrow">
-      <span>✦</span> Crafting with intent
-    </div>
-    <h1 class="hero-title">Tools that&nbsp;just&nbsp;work.</h1>
-    <p class="hero-subtitle">
-      We build privacy-first utility applications for iOS and Android — engineered with precision, designed for clarity.
-    </p>
-    <div class="hero-cta">
-      <a href="#apps" class="btn btn-ghost">Explore our apps →</a>
-    </div>
+  <!-- ── HERO ──────────────────────────────────── -->
+  <header class="hero">
+    <span class="hero-label">Independent Developer</span>
+    <h1 class="hero-title">We make apps that<br>respect you.</h1>
+    <p class="hero-desc">The Umami Studio is an independent app studio focused on building privacy-first, well-crafted utility apps for iOS and Android.</p>
+  </header>
 
-    <div class="scroll-hint">
-      <div class="scroll-dot"></div>
-    </div>
-  </section>
+  <!-- ── APPS ──────────────────────────────────── -->
+  <main class="content">
 
-  <!-- ─── VALUES ───────────────────────────────────── -->
-  <section class="section" id="values">
-    <p class="section-label reveal">Philosophy</p>
-
-    <div class="values-grid">
-      <div class="value-item reveal reveal-delay-1">
-        <div class="value-num">01</div>
-        <h3 class="value-title">Privacy First</h3>
-        <p class="value-desc">Your data stays on your device. We don't track you, profile you, or monetise your behaviour. Full stop.</p>
+    <section class="apps-section" id="apps">
+      <div class="section-head">
+        <span class="section-title">Apps</span>
+        <div class="section-line"></div>
       </div>
-      <div class="value-item reveal reveal-delay-2">
-        <div class="value-num">02</div>
-        <h3 class="value-title">Radical Clarity</h3>
-        <p class="value-desc">Every screen, every tap, every word is deliberate. We remove anything that doesn't serve a purpose.</p>
-      </div>
-      <div class="value-item reveal reveal-delay-3">
-        <div class="value-num">03</div>
-        <h3 class="value-title">Built to Last</h3>
-        <p class="value-desc">We obsess over correctness, performance, and longevity — so our apps stay reliable long after launch.</p>
-      </div>
-    </div>
-  </section>
 
-  <div class="section-divider"></div>
+      <div class="apps-list">
 
-  <!-- ─── APPS ──────────────────────────────────────── -->
-  <section class="apps-section" id="apps">
-    <p class="section-label reveal" style="padding-top: 80px;">Apps</p>
-
-    <div class="app-card reveal">
-      <div class="app-card-header">
-        <div>
-          <div class="app-meta">
-            <img src="assets/images/audio-rescue-icon.png" alt="Audio Rescue icon" class="app-icon">
-            <span class="app-badge">&#9733; New</span>
+        <!-- Audio Rescue -->
+        <a href="/audiorescue/" class="app-card">
+          <img src="assets/images/audio-rescue-icon.png" alt="Audio Rescue" class="app-icon">
+          <div class="app-body">
+            <div class="app-name">Audio Rescue</div>
+            <div class="app-tagline">Remove water from your speakers using sound frequencies</div>
           </div>
-          <h2 class="app-name">Audio Rescue</h2>
-          <p class="app-tagline">
-            Accidentally got water in your phone's speakers? Audio Rescue uses carefully tuned sound frequencies to help push trapped moisture out and restore speaker clarity — no shaking required.
-          </p>
-        </div>
-        <div class="app-availability">
-          <span class="platform-tag">iOS</span>
-          <span class="platform-tag">Android</span>
-        </div>
+          <div class="app-platforms">
+            <span class="platform-tag">iOS</span>
+            <span class="platform-tag">Android</span>
+          </div>
+          <span class="app-arrow">→</span>
+        </a>
+
+        <!-- Placeholder — future app slot style hint -->
+        <!-- To add a new app: copy the <a class="app-card"> block above and update content -->
+
+      </div>
+    </section>
+
+    <!-- ── VALUES ──────────────────────────────── -->
+    <section class="values-section">
+      <div class="section-head">
+        <span class="section-title">Philosophy</span>
+        <div class="section-line"></div>
       </div>
 
-      <div class="app-features-row">
-        <div class="feat-cell">
-          <span class="feat-icon">💧</span>
-          <h4 class="feat-title">Quick Clean</h4>
-          <p class="feat-desc">Fast 15–60 second sessions at 165Hz optimised for everyday splashes.</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-num">01</div>
+          <div class="value-name">Privacy First</div>
+          <p class="value-desc">Your data stays on your device. We don't track you, profile you, or sell your information.</p>
         </div>
-        <div class="feat-cell">
-          <span class="feat-icon">🔊</span>
-          <h4 class="feat-title">Deep Sweep</h4>
-          <p class="feat-desc">30-second sweep from 165Hz to 300Hz for deeper moisture clearing.</p>
+        <div class="value-card">
+          <div class="value-num">02</div>
+          <div class="value-name">Radical Clarity</div>
+          <p class="value-desc">Every screen and interaction is deliberate. We strip away anything that doesn't serve a purpose.</p>
         </div>
-        <div class="feat-cell">
-          <span class="feat-icon">⚡</span>
-          <h4 class="feat-title">Turbo Mode</h4>
-          <p class="feat-desc">High-intensity 400Hz bursts for stubborn water after full submersion.</p>
-        </div>
-        <div class="feat-cell">
-          <span class="feat-icon">🎛️</span>
-          <h4 class="feat-title">Custom Frequency</h4>
-          <p class="feat-desc">Manual control from 150Hz to 450Hz for precise, targeted results.</p>
+        <div class="value-card">
+          <div class="value-num">03</div>
+          <div class="value-name">Built to Last</div>
+          <p class="value-desc">We obsess over reliability and performance so our apps stay solid long after launch.</p>
         </div>
       </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-brand">© 2026 The Umami Studio</span>
+      <ul class="footer-links">
+        <li><a href="mailto:theumamistudio@gmail.com">Contact</a></li>
+      </ul>
     </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ─── FOOTER ─────────────────────────────────────── -->
-  <footer>
-    <span class="footer-brand">The Umami Studio</span>
-    <ul class="footer-links">
-      <li><a href="/audiorescue/privacy">Privacy Policy</a></li>
-      <li><a href="/audiorescue/terms">Terms of Use</a></li>
-    </ul>
-    <p class="footer-copy">&copy; 2026 The Umami Studio. All rights reserved.</p>
   </footer>
 
-  <!-- ─── SCROLL REVEAL SCRIPT ──────────────────────── -->
+  <!-- ── THEME TOGGLE SCRIPT ────────────────────── -->
   <script>
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      }),
-      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
-    );
+    var html     = document.documentElement;
+    var btn      = document.getElementById('themeToggle');
+    var icon     = document.getElementById('themeIcon');
+    var metaTheme = document.getElementById('themeColorMeta');
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+      metaTheme.content = theme === 'dark' ? '#0a0a0b' : '#ffffff';
+      localStorage.setItem('ums-theme', theme);
+    }
+
+    // Apply correct icon on load
+    applyTheme(html.getAttribute('data-theme') || 'light');
+
+    btn.addEventListener('click', function() {
+      var current = html.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
   </script>
 
 </body>

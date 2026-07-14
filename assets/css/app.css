@@ -1,0 +1,267 @@
+/* ==============================================
+   The Umami Studio — App Page Styles
+   Used by: /audiorescue/ and future app pages
+   ============================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300&display=swap');
+
+/* ── TOKENS ── */
+:root {
+  --bg:         #ffffff;
+  --bg-subtle:  #f5f5f7;
+  --bg-hover:   #f0f0f2;
+  --border:     #e5e5e7;
+  --border-strong: #c7c7cc;
+  --text-1:     #1d1d1f;
+  --text-2:     #6e6e73;
+  --text-3:     #aeaeb2;
+  --accent:     #0066cc;
+  --accent-bg:  #e8f0fb;
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.08);
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:         #0a0a0b;
+    --bg-subtle:  #111113;
+    --bg-hover:   #18181b;
+    --border:     #2a2a2d;
+    --border-strong: #3f3f46;
+    --text-1:     #f5f5f7;
+    --text-2:     #a1a1aa;
+    --text-3:     #52525b;
+    --accent:     #5ab2ff;
+    --accent-bg:  rgba(90,178,255,0.1);
+    --shadow-sm:  0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md:  0 4px 16px rgba(0,0,0,0.4);
+  }
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text-1);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ── NAV ── */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-2);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-back:hover { color: var(--text-1); background: var(--bg-subtle); }
+
+.nav-legal {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-legal a {
+  font-size: 0.8rem;
+  color: var(--text-3);
+  transition: color 0.2s;
+}
+
+.nav-legal a:hover { color: var(--text-1); }
+
+/* ── APP HERO ── */
+.app-hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 24px 56px;
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.app-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.app-hero-body { flex: 1; min-width: 0; }
+
+.app-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.app-name {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-1);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.app-tagline {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+
+/* ── STORE BADGES ── */
+.badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-2);
+  transition: all 0.2s;
+}
+
+.badge-icon { font-size: 1rem; line-height: 1; }
+
+.badge-text { display: flex; flex-direction: column; line-height: 1.2; }
+.badge-text span:first-child {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+}
+.badge-text span:last-child { font-size: 0.85rem; font-weight: 600; color: var(--text-1); }
+
+.badge.coming-soon { opacity: 0.6; cursor: default; }
+
+/* ── DIVIDER ── */
+.divider {
+  max-width: 760px;
+  margin: 0 auto;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── FEATURES ── */
+.features-section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.section-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 24px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.feature-card {
+  padding: 24px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.2s;
+}
+
+.feature-card:hover { border-color: var(--border-strong); }
+
+.feature-icon { font-size: 1.5rem; margin-bottom: 12px; display: block; }
+
+.feature-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-1);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.feature-desc {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy { font-size: 0.78rem; color: var(--text-3); }
+
+.footer-links { display: flex; gap: 20px; list-style: none; }
+.footer-links a { font-size: 0.78rem; color: var(--text-3); transition: color 0.2s; }
+.footer-links a:hover { color: var(--text-1); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .app-hero { flex-direction: column; gap: 20px; padding: 40px 16px 40px; }
+  .app-icon { width: 80px; height: 80px; border-radius: 18px; }
+  .features-grid { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .nav { padding: 0 16px; }
+}
