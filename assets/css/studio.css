@@ -73,7 +73,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: var(--white);
+  color: #fff;
 }
 
 .nav.scrolled .nav-logo { color: var(--text-1); }
