@@ -5,96 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Umami Studio — Privacy-first utility apps</title>
   <meta name="description" content="The Umami Studio builds privacy-first, minimalist utility applications for iOS and Android.">
-  <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta property="og:title" content="The Umami Studio">
+  <meta property="og:description" content="Privacy-first utility apps, meticulously designed.">
+  <meta name="theme-color" content="#0a2540">
   <link rel="icon" type="image/png" href="assets/images/audio-rescue-icon.png">
   <link rel="stylesheet" href="assets/css/studio.css">
-  <!-- Inline theme script runs before paint to avoid flash -->
+  <!-- Anti-flash: set theme before first paint -->
   <script>
-    (function() {
-      var saved = localStorage.getItem('ums-theme') || 'light';
-      document.documentElement.setAttribute('data-theme', saved);
+    (function(){
+      var t = localStorage.getItem('ums-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
 </head>
 <body>
 
-  <!-- ── NAV ───────────────────────────────────── -->
-  <nav class="nav">
+  <!-- ── NAV ────────────────────────────────────── -->
+  <nav class="nav" id="mainNav">
     <span class="nav-logo">The Umami Studio</span>
     <div class="nav-right">
       <a href="#apps" class="nav-link">Apps</a>
+      <a href="#about" class="nav-link">About</a>
       <a href="mailto:theumamistudio@gmail.com" class="nav-link">Contact</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">
         <span id="themeIcon">☀️</span>
       </button>
     </div>
   </nav>
 
-  <!-- ── HERO ──────────────────────────────────── -->
-  <header class="hero">
-    <span class="hero-label">Independent Developer</span>
-    <h1 class="hero-title">We make apps that<br>respect you.</h1>
-    <p class="hero-desc">The Umami Studio is an independent app maker focused on building privacy-first, well-crafted utility apps for iOS and Android.</p>
-  </header>
+  <!-- ── HERO ───────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-eyebrow">Independent App Studio</div>
+    <h1 class="hero-title">Apps that<br><em>respect</em> you.</h1>
+    <p class="hero-subtitle">The Umami Studio makes privacy-first utility apps for iOS and Android — built with care, designed with clarity.</p>
+    <div class="hero-cta">
+      <a href="#apps" class="btn-hero-primary">See our apps</a>
+      <a href="mailto:theumamistudio@gmail.com" class="btn-hero-ghost">Get in touch</a>
+    </div>
+    <div class="hero-scroll">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 3v10M3 9l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
 
-  <!-- ── APPS ──────────────────────────────────── -->
-  <main class="content">
+  <!-- ── APPS ───────────────────────────────────── -->
+  <section class="section" id="apps">
+    <div class="section-label reveal">Our Apps</div>
 
-    <section class="apps-section" id="apps">
-      <div class="section-head">
-        <span class="section-title">Apps</span>
-        <div class="section-line"></div>
-      </div>
+    <div class="apps-grid">
 
-      <div class="apps-list">
-
-        <!-- Audio Rescue -->
-        <a href="/audiorescue/" class="app-card">
-          <img src="assets/images/audio-rescue-icon.png" alt="Audio Rescue" class="app-icon">
-          <div class="app-body">
-            <div class="app-name">Audio Rescue</div>
-            <div class="app-tagline">Remove water from your speakers using sound frequencies</div>
+      <!-- Audio Rescue Card -->
+      <a href="/audiorescue/" class="app-card app-card-audio-rescue reveal reveal-d1" aria-label="View Audio Rescue">
+        <div class="app-card-bg">
+          <img src="assets/images/audio-rescue-icon.png" alt="Audio Rescue" class="app-card-icon">
+        </div>
+        <div class="app-card-info">
+          <div>
+            <div class="app-card-name">Audio Rescue</div>
+            <div class="app-card-sub">Remove water from your speakers</div>
           </div>
-          <div class="app-platforms">
-            <span class="platform-tag">iOS</span>
-            <span class="platform-tag">Android</span>
+          <div class="app-card-arrow">→</div>
+        </div>
+      </a>
+
+      <!-- Placeholder slot for future apps — just add more .app-card blocks here -->
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT ───────────────────────────────────── -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="section-label reveal">About</div>
+      <div class="about-grid">
+        <h2 class="about-lead reveal">How we think about building apps.</h2>
+        <div class="about-values">
+          <div class="value-row reveal">
+            <span class="value-num">01</span>
+            <div class="value-content">
+              <h3>Privacy First</h3>
+              <p>Your data stays on your device. We don't track you, profile you, or sell your information. Our apps work fully offline — no accounts, no servers, no data collection.</p>
+            </div>
           </div>
-          <span class="app-arrow">→</span>
-        </a>
-
-        <!-- Placeholder — future app slot style hint -->
-        <!-- To add a new app: copy the <a class="app-card"> block above and update content -->
-
-      </div>
-    </section>
-
-    <!-- ── VALUES ──────────────────────────────── -->
-    <section class="values-section">
-      <div class="section-head">
-        <span class="section-title">Philosophy</span>
-        <div class="section-line"></div>
-      </div>
-
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-num">01</div>
-          <div class="value-name">Privacy First</div>
-          <p class="value-desc">Your data stays on your device. We don't track you, profile you, or sell your information.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-num">02</div>
-          <div class="value-name">Radical Clarity</div>
-          <p class="value-desc">Every screen and interaction is deliberate. We strip away anything that doesn't serve a purpose.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-num">03</div>
-          <div class="value-name">Built to Last</div>
-          <p class="value-desc">We obsess over reliability and performance so our apps stay solid long after launch.</p>
+          <div class="value-row reveal reveal-d1">
+            <span class="value-num">02</span>
+            <div class="value-content">
+              <h3>Radical Clarity</h3>
+              <p>Every screen, every tap, every word is deliberate. We obsess over removing anything that doesn't serve a purpose — the best interface is the one that gets out of your way.</p>
+            </div>
+          </div>
+          <div class="value-row reveal reveal-d2">
+            <span class="value-num">03</span>
+            <div class="value-content">
+              <h3>Built to Last</h3>
+              <p>We care deeply about correctness, performance, and longevity. Our apps are engineered to stay reliable and maintainable long after launch — not just polished for the demo.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-
-  </main>
+    </div>
+  </section>
 
   <!-- ── FOOTER ─────────────────────────────────── -->
   <footer class="footer">
@@ -102,30 +113,51 @@
       <span class="footer-brand">© 2026 The Umami Studio</span>
       <ul class="footer-links">
         <li><a href="mailto:theumamistudio@gmail.com">Contact</a></li>
+        <li><a href="https://theumamistudio.github.io/audiorescue/privacy">Privacy</a></li>
+        <li><a href="https://theumamistudio.github.io/audiorescue/terms">Terms</a></li>
       </ul>
     </div>
   </footer>
 
-  <!-- ── THEME TOGGLE SCRIPT ────────────────────── -->
+  <!-- ── SCRIPTS ────────────────────────────────── -->
   <script>
-    var html     = document.documentElement;
-    var btn      = document.getElementById('themeToggle');
-    var icon     = document.getElementById('themeIcon');
-    var metaTheme = document.getElementById('themeColorMeta');
+    // Sticky nav — turns frosted glass on scroll
+    var nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
 
-    function applyTheme(theme) {
-      html.setAttribute('data-theme', theme);
-      icon.textContent = theme === 'dark' ? '🌙' : '☀️';
-      metaTheme.content = theme === 'dark' ? '#0a0a0b' : '#ffffff';
-      localStorage.setItem('ums-theme', theme);
+    // Theme toggle
+    var html  = document.documentElement;
+    var btn   = document.getElementById('themeBtn');
+    var icon  = document.getElementById('themeIcon');
+    var meta  = document.querySelector('meta[name="theme-color"]');
+
+    function applyTheme(t) {
+      html.setAttribute('data-theme', t);
+      icon.textContent = t === 'dark' ? '🌙' : '☀️';
+      if (meta) meta.content = t === 'dark' ? '#050d1a' : '#0a2540';
+      localStorage.setItem('ums-theme', t);
     }
 
-    // Apply correct icon on load
     applyTheme(html.getAttribute('data-theme') || 'light');
 
     btn.addEventListener('click', function() {
-      var current = html.getAttribute('data-theme');
-      applyTheme(current === 'dark' ? 'light' : 'dark');
+      applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+
+    // Scroll reveal
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      observer.observe(el);
     });
   </script>
 
