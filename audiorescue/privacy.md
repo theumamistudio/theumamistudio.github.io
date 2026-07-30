@@ -1,3 +1,6 @@
+---
+title: Audio Rescue Privacy Policy
+---
 # Privacy Policy for Audio Rescue
 **Last updated:** July 28, 2026
 

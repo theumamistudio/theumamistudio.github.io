@@ -1,3 +1,6 @@
+---
+title: Audio Rescue Terms & Conditions
+---
 # Terms of Use for Audio Rescue
 **Last updated:** June 3, 2026
 
