@@ -78,10 +78,12 @@ img { display: block; max-width: 100%; }
   transition: all 0.2s;
 }
 
-.nav-back:hover {
-  background: var(--accent-yellow);
-  border: 2px solid var(--border-color);
-  color: #111827;
+@media (hover: hover) {
+  .nav-back:hover {
+    background: var(--accent-yellow);
+    border: 2px solid var(--border-color);
+    color: #111827;
+  }
 }
 
 .nav-legal {
@@ -99,12 +101,14 @@ img { display: block; max-width: 100%; }
   transition: all 0.2s;
 }
 
-.nav-legal a:hover { 
-  background: var(--accent-blue); 
-  border: 2px solid var(--border-color);
-  color: #111827;
+@media (hover: hover) {
+  .nav-legal a:hover { 
+    background: var(--accent-blue); 
+    border: 2px solid var(--border-color);
+    color: #111827;
+  }
 }
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) and (hover: hover) {
   .nav-back:hover, .nav-legal a:hover { color: #111827; }
 }
 
@@ -248,10 +252,12 @@ img { display: block; max-width: 100%; }
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.feature-card:hover {
-  transform: translate(3px, 3px);
-  box-shadow: 3px 3px 0px var(--border-color);
-  background: var(--bg-color);
+@media (hover: hover) {
+  .feature-card:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0px var(--border-color);
+    background: var(--bg-color);
+  }
 }
 
 .feature-icon { 
@@ -319,13 +325,15 @@ img { display: block; max-width: 100%; }
   box-shadow: 3px 3px 0px var(--border-color);
   transition: all 0.2s;
 }
-.footer-links a:hover { 
-  background: var(--accent-orange); 
-  color: #111827;
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--border-color);
+@media (hover: hover) {
+  .footer-links a:hover { 
+    background: var(--accent-orange); 
+    color: #111827;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--border-color);
+  }
 }
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) and (hover: hover) {
   .footer-links a:hover { color: #111827; }
 }
 

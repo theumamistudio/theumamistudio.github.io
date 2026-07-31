@@ -95,10 +95,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-transform: uppercase;
 }
 
-.nav-link:hover {
-  background: var(--accent-yellow);
-  border: 2px solid var(--border-color);
-  color: #111827; /* Force dark text on hover */
+@media (hover: hover) {
+  .nav-link:hover {
+    background: var(--accent-yellow);
+    border: 2px solid var(--border-color);
+    color: #111827; /* Force dark text on hover */
+  }
 }
 [data-theme="dark"] .nav-link:hover { color: #111827; }
 
@@ -113,11 +115,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   box-shadow: 3px 3px 0px var(--border-color);
 }
 
-.theme-btn:hover { 
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--border-color);
-  background: var(--accent-orange);
-  color: #111827;
+@media (hover: hover) {
+  .theme-btn:hover { 
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--border-color);
+    background: var(--accent-orange);
+    color: #111827;
+  }
 }
 [data-theme="dark"] .theme-btn:hover { color: #111827; }
 
@@ -220,9 +224,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .btn-hero-primary { background: var(--accent-orange); color: #111827; }
 .btn-hero-ghost { background: var(--bg-color); }
 
-.btn-hero-primary:hover, .btn-hero-ghost:hover {
-  transform: translate(4px, 4px);
-  box-shadow: var(--hard-shadow-hover);
+@media (hover: hover) {
+  .btn-hero-primary:hover, .btn-hero-ghost:hover {
+    transform: translate(4px, 4px);
+    box-shadow: var(--hard-shadow-hover);
+  }
 }
 
 /* ── HERO SCROLL ── */
@@ -294,9 +300,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.app-card:hover {
-  transform: translate(4px, 4px);
-  box-shadow: 4px 4px 0px var(--border-color);
+@media (hover: hover) {
+  .app-card:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
 }
 
 .app-card-bg {
@@ -319,8 +327,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   box-shadow: 4px 4px 0px var(--border-color);
   transition: transform 0.3s var(--ease-out);
 }
-.app-card:hover .app-card-icon {
-  transform: scale(1.1) rotate(5deg);
+@media (hover: hover) {
+  .app-card:hover .app-card-icon {
+    transform: scale(1.1) rotate(5deg);
+  }
 }
 
 .app-card-info {
@@ -492,11 +502,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: all 0.2s;
 }
 
-.footer-links a:hover { 
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--border-color);
-  background: var(--accent-green);
-  color: #111827;
+@media (hover: hover) {
+  .footer-links a:hover { 
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--border-color);
+    background: var(--accent-green);
+    color: #111827;
+  }
 }
 [data-theme="dark"] .footer-links a:hover { color: #111827; }
 
