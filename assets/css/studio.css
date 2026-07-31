@@ -513,12 +513,26 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .nav { padding: 0 20px; }
+  .nav {
+    position: absolute;
+    padding: 20px;
+    height: auto;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .hero {
+    padding-top: 180px;
+  }
   .hero-title { font-size: 3rem; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-lead { padding: 16px; font-size: 1.8rem; }
   .value-row { flex-direction: column; padding: 20px; }
-  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
   .footer-links { flex-wrap: wrap; }
 }
 
