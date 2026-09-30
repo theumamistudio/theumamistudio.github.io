@@ -26,7 +26,7 @@ Local settings are used only to provide the experience you expect, such as remem
 ## Third-Party Services
 App stores, operating systems, and crash-reporting services may collect technical data according to their own policies. Those services are controlled by their providers, not by Audio Rescue.
 
-We use **Firebase Analytics** and **Crashlytics** as third-party services. With your explicit consent, these services collect screen views, custom events, crash reports, and device/app diagnostics. The purpose of this data collection is strictly for improving app stability and performance. You can opt-out at any time from the app's Settings menu.
+We use **Firebase Analytics**, **Crashlytics**, and **Remote Config**. as third-party services. Remote Config allows us to manage app features dynamically. With your explicit consent, Analytics and Crashlytics collect screen views, custom events, crash reports, and device/app diagnostics.
 
 ## Advertising
 We use **Google AdMob** and the Google Mobile Ads SDK to display advertising in Audio Rescue. Advertising helps us keep the app free. We do not control the content of the advertisements you may see, and the presence of an ad is not an endorsement of any product or service it promotes.
